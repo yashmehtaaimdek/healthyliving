@@ -91,12 +91,13 @@ nav .navbar-nav li a:hover{
     min-height: 500px;
 }
 
-.custom-social{
+div.custom-social{
     position: fixed;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .custom-social a {
