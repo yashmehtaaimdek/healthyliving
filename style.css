@@ -1,8 +1,8 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
 html {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .topbar {
@@ -18,34 +18,55 @@ html {
     color: #28a745;
 }
 
-.nav, .navbar {
-    padding: 0px 100px 0px 100px;
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    color: #28a745;
+    padding-right: 2rem;
 }
 
-.nav.justify-content-end .nav-item a {
+@media only screen and (max-width: 768px) and (min-width: 200px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+.nav-item a {
     color: #28a745;
 }
-.navbar .navbar-brand{
+
+.navbar .navbar-brand {
     color: #28a745;
     font-weight: 800;
     font-size: xx-large;
 }
 
-nav .navbar-nav li a{
+nav .navbar-nav li a {
     font-weight: 600;
 }
 
-nav .navbar-nav li a:hover{
+nav .navbar-nav li a:hover {
     color: #28a745 !important;
 }
 
-.active a{
+.active a {
     color: #28a745 !important;
 }
+
 .form-control:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-} 
+}
+
+.carousel-indicators {
+    text-align: right;
+    float: right;
+    right: 2% !important;
+    left: inherit;
+}
 
 .carousel-indicators li {
     width: 10px;
@@ -57,9 +78,14 @@ nav .navbar-nav li a:hover{
     background-color: #28a745;
 }
 
-.carousel-caption{
-    color: #28a745;
+.carousel-caption, .carousel caption {
+    color: white;
+    font-size: xx-large;
     font-weight: 500;
+    text-align: left;
+    float: left;
+    left: 2% !important;
+    right: inherit;
 }
 
 .btn-outline-light {
@@ -91,7 +117,7 @@ nav .navbar-nav li a:hover{
     min-height: 500px;
 }
 
-div.custom-social{
+div.custom-social {
     position: fixed;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -100,6 +126,38 @@ div.custom-social{
     z-index: 1;
 }
 
+@media(max-width:576px) {
+    div.custom-social {
+        position: fixed;
+        width: auto;
+        top: 96%;
+        margin-left: 6%;
+        /* transform: translateY(-50%); */
+        /* transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); */
+        z-index: 1;
+
+        /* .icon-list { 
+            position: fixed; 
+            top: 242px; 
+            right:40%; 
+            transform: translateY(-50%); 
+              
+        }  */
+    }
+
+    .custom-social a {
+        float: right;
+        display: block;
+        text-align: center;
+        padding: 20px;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 20px;
+    }
+}
 .custom-social a {
     display: block;
     text-align: center;
@@ -109,39 +167,63 @@ div.custom-social{
     font-size: 20px;
 }
 
+/* .custom-social{
+    position: absolute;
+    top: 25%
+}
+
+.custom-social li{
+    position: relative;
+    list-style: none;
+    padding: 20px;
+    transition: 0.6s;
+    color: white;
+}
+
+.custom-social li i{
+    font-size: 40px;
+}
+
+.custom-social li i:hover{
+    padding: 20px 40px;
+
+} */
+
+
+
 
 .custom-social .fa:hover {
     opacity: 0.7;
 }
 
 .custom-social .fa-facebook {
-  background: #3B5998;
-  color: white;
+    background: #3B5998;
+    color: white;
 }
 
 .custom-social .fa-twitter {
-  background: #55ACEE;
-  color: white;
+    background: #55ACEE;
+    color: white;
 }
 
 .custom-social .fa-google {
-  background: #dd4b39;
-  color: white;
+    background: #dd4b39;
+    color: white;
 }
 
 .custom-social .fa-linkedin {
-  background: #007bb5;
-  color: white;
+    background: #007bb5;
+    color: white;
 }
 
 .custom-social .fa-youtube {
-  background: #bb0000;
-  color: white;
+    background: #bb0000;
+    color: white;
 }
 
 .custom-social .fa-instagram {
-  background: #125688;
-  color: white;
+    background: #125688;
+    color: white;
 }
 
 .tagline {
